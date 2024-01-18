@@ -55,10 +55,10 @@ router.post("/signup", (req, res, next) => {
         .then((createdUser) => {
           // Deconstruct the newly created user object to omit the password
           // We should never expose passwords publicly
-          const { email, username, photo, _id } = createdUser;
+          const { email, username, photo, _id, cart } = createdUser;
 
           // Create a new object that doesn't expose the password
-          const payload = { email, username, photo, _id };
+          const payload = { email, username, photo, _id, cart };
 
           const authToken = jwt.sign(payload, process.env.SECRET, {
             algorithm: "HS256",

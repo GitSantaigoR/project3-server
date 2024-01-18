@@ -1,4 +1,4 @@
-const stripe = require('stripe')('pk_test_51OXoulHXWpaM9JPdLD3XO6WnFKKEpYv2fHEjBsXXy2UDnQqMlhj1iQVS9iFkgFXd9wqfG36DFqDgLxsnK87w3F5i00rSw4K0MC')
+
 
 const { model, Schema } = require("mongoose");
 

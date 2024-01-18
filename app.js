@@ -8,6 +8,11 @@ var mongoose = require('mongoose')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var authRouter = require('./routes/auth');
+var bookRouter = require('./routes/bookRoutes')
+var cartRouter = require('./routes/cartRoutes')
+var transactionRouter = require('./routes/transactionRoutes')
+
 
 var app = express();
 
@@ -30,8 +35,13 @@ app.use(
 //     cors()
 //   );
 
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/auth', authRouter)
+app.use('/books', bookRouter)
+app.use('/cart', cartRouter)
+app.use('/transaction', transactionRouter)
+
 
 mongoose
   .connect(process.env.MONGODB_URI)

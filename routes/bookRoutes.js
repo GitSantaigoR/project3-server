@@ -36,13 +36,15 @@ router.post("/", isAuthenticated, (req, res, next) => {
 
 router.get('/', (req, res, next) => {
 
-    Book.find({ sold: false
+    Book.find(
+        { sold: false
         // , inCart: false 
-    })
+    }
+    )
     .populate('seller')
     .then((foundBook) => {
         console.log("Found Book ==>", foundBook)
-        res.json(err)
+        res.json(foundBook)
     })
     .catch((err) => {
         console.log(err)

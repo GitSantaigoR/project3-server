@@ -6,10 +6,18 @@ const bookSchema = new Schema(
     author: { type: String, required: true },
     description: { type: String },
     format: { type: String },
-    pages: { type: Number, required: true },
-    genres: { type: String, required: true },
-    image: { type: String, required: true },
-    price: { type: Number, required: true },
+    pages: { type: Number
+        // , required: true 
+    },
+    genres: { type: String
+        // , required: true 
+    },
+    image: { type: String
+        // , required: true 
+    },
+    price: { type: Number
+        // , required: true 
+    },
     condition: { type: String },
     sold: { type: Boolean, default: false },
     // inCart: { type: Boolean, default: false },
